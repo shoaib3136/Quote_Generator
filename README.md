@@ -187,7 +187,7 @@ displayQuote();
 
 ```
 ## Output:
-![alt text](image.png)
+![alt text](image-1.png)
 
 ## Result:
 A simple quote generator using HTML, CSS, and JavaScript that displays a new random motivational quote each time a button is clicked — similar to daily quote sections on blogs or productivity apps is created successfully.
