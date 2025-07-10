@@ -45,21 +45,22 @@ Add a “Tweet this” button with a share link.
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>InspireMe</title>
   <link rel="stylesheet" href="styles.css"/>
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+</head>
 <body>
   
   <div class="header">
     <h1>InspireMe</h1>
   </div>
 
-
-  <div class="content">
+  
+  <div class="quote-box">
     <div class="quote-container">
-      <p id="quoteText">"Loading..."</p>
-<span id="quoteAuthor">-</span>
-    
+      <p id="quoteText" class="quote-text">"Loading..."</p>
+      <span id="quoteAuthor" class="quote-author">-</span>
+    </div>
 
-  <div class="buttons">
+    <div class="buttons">
       <button id="newQuoteBtn">Get Quote</button>
       <a id="tweetBtn" href="#" target="_blank">Tweet This</a>
     </div>
@@ -68,6 +69,7 @@ Add a “Tweet this” button with a share link.
   <script src="scripts.js"></script>
 </body>
 </html>
+
 
 ```
 ## CSS Code:
@@ -80,112 +82,65 @@ Add a “Tweet this” button with a share link.
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f5f5dc;
-  height: 100vh;
+  background-color: white; 
   display: flex;
   flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 
 
 .header {
-  background-color: #007bff; 
+  background-color: #007bff;
   color: white;
+  width: 100%;
   padding: 20px;
   text-align: center;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-.content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
 
-.quote-container {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 30px;
+.quote-box {
+  background-color: #f5f5dc; 
+  margin: 40px 20px;
+  padding: 30px;
+  border-radius: 15px;
+  border: 2px solid #ddd;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
   text-align: center;
 }
 
-.quotetext {
-  font-weight: 500;
-}
 
-.quoteauthor {
-  font-style: italic;
-  color: #555;
-}
-
-
-.buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-button, a {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover, a:hover {
-  background-color: #0056b3;
-}
-.quote-container {
-  display: flex;
-  flex-direction: column;  
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.quotetext {
-  font-weight: 500;
+.quote-text {
+  font-size: 1.4rem;
   margin-bottom: 10px;
+  color: #333;
 }
 
-.quoteauthor {
+
+.quote-author {
   font-style: italic;
-  color: #555;
+  color: #666;
+  display: block;
+  margin-bottom: 25px;
 }
 
 
 .buttons {
   display: flex;
-  gap: 15px;
   justify-content: center;
+  gap: 15px;
   flex-wrap: wrap;
-  margin-top: 10px;
 }
 
-
 button, a {
-  padding: 10px 20px;
   background-color: #007bff;
   color: white;
   border: none;
+  padding: 10px 20px;
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
@@ -197,6 +152,7 @@ button, a {
 button:hover, a:hover {
   background-color: #0056b3;
 }
+
 
 ```
 ## Javascript Code:
